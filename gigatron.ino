@@ -23,6 +23,7 @@
 #include "time.h"
 #include <ESP32Time.h>
 #include <Preferences.h>
+#include <OLEDDisplayFonts.h>
 
 Preferences preferences;
 
@@ -54,7 +55,7 @@ CRGB leds[NUM_LEDS];
 #define pinSSR 15
 //#define pinDHT 19
 bool ssrState = false;
-float hysteresis = 1.1;
+float hysteresis = 0.6;
 bool partymode = false;
 #define pushbutton 16           // Switch connection if available
 const int DEBOUNCE_DELAY = 50;  // the debounce time; increase if the output flickers
